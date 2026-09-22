@@ -4,8 +4,8 @@ from .forms import StudentForm
 
 # Create your views here.
 def student_list(request):
-    student = Student.objects.all()
-    return render(request, "students/list.html",{student : student})
+    students = Student.objects.all()
+    return render(request, "students/list.html",{"students" : students})
 
 def create_student(request):
     if request.method == "POST":
